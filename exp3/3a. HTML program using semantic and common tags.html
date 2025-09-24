@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Semantic HTML5 Example</title>
+    <style>
+        header, footer, nav, article, aside, section {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+        }
+        nav ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+        .highlight {
+            color: blue;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>My Website Header</h1>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#articles">Articles</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section id="articles">
+        <article>
+            <header>
+                <h2>Understanding Semantic HTML</h2>
+                <p>Published on <time datetime="2025-09-23">September 23, 2025</time></p>
+            </header>
+            <figure>
+                <img src="https://via.placeholder.com/400x200" alt="Sample Image">
+                <figcaption>Example of semantic tags in HTML5</figcaption>
+            </figure>
+            <p>This article explains the usage of semantic tags like <span class="highlight">&lt;article&gt;</span>, <span class="highlight">&lt;section&gt;</span>, and others for better web structure.</p>
+            <aside>
+                <h3>Did you know?</h3>
+                <p>Using semantic tags improves SEO and accessibility.</p>
+            </aside>
+            <footer>
+                <p>Author: Jane Doe</p>
+            </footer>
+        </article>
+    </section>
+
+    <div>
+        <p>This paragraph is inside a generic <code>&lt;div&gt;</code> container.</p>
+        <span style="color: red;">This text is inside a span and styled inline.</span>
+    </div>
+</main>
+
+<footer>
+    <p>© 2025 My Website. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
