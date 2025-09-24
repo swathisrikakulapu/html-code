@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Background Image Example</title>
+  <style>
+    body {
+      height: 2000px; /* to enable scrolling */
+      margin: 0;
+      background-image: url('https://via.placeholder.com/400x200');
+      background-repeat: no-repeat;
+      background-position: center 50%;
+      background-attachment: fixed;
+      /* Tilt the background using transform on a pseudo-element */
+      position: relative;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      width: 400px;
+      height: 200px;
+      background-image: url('https://via.placeholder.com/400x200');
+      background-size: cover;
+      background-repeat: no-repeat;
+      transform: translate(-50%, -50%) rotate(15deg);
+      pointer-events: none; /* so it doesn't block interactions */
+      z-index: -1;
+    }
+  </style>
+</head>
+<body>
+  <h1>Scroll to see the background image remain fixed and tilted halfway down</h1>
+  <p>Content goes here. Keep scrolling...</p>
+</body>
+</html>
