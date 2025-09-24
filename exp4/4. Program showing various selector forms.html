@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>CSS Selector Forms Example</title>
+<style>
+  /* i. Simple selectors */
+
+  /* Element selector: targets all <p> */
+  p {
+    color: navy;
+  }
+
+  /* ID selector: targets element with id="unique" */
+  #unique {
+    font-weight: bold;
+  }
+
+  /* Class selector: targets elements with class="highlight" */
+  .highlight {
+    background-color: yellow;
+  }
+
+  /* Group selector: targets all h1 and h2 */
+  h1, h2 {
+    font-family: Arial, sans-serif;
+  }
+
+  /* Universal selector: targets all elements */
+  * {
+    margin: 5px;
+  }
+
+
+  /* ii. Combinator selectors */
+
+  /* Descendant selector: any <span> inside <div> */
+  div span {
+    color: green;
+  }
+
+  /* Child selector: direct child <li> of <ul> */
+  ul > li {
+    list-style-type: square;
+  }
+
+  /* Adjacent sibling selector: <p> immediately after <h2> */
+  h2 + p {
+    font-style: italic;
+  }
+
+  /* General sibling selector: all <p> siblings after <h3> */
+  h3 ~ p {
+    text-decoration: underline;
+  }
+
+
+  /* iii. Pseudo-class selector: hover on links */
+  a:hover {
+    color: red;
+  }
+
+
+  /* iv. Pseudo-element selector: first letter of <p> */
+  p::first-letter {
+    font-size: 200%;
+    color: orange;
+  }
+
+
+  /* v. Attribute selector: all input elements with type="text" */
+  input[type="text"] {
+    border: 2px solid blue;
+    padding: 5px;
+  }
+</style>
+</head>
+<body>
+
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<p id="unique">This paragraph has an <code>id="unique"</code> and is bold.</p>
+<p class="highlight">This paragraph has a <code>class="highlight"</code> and yellow background.</p>
+
+<div>
+  <span>This span is inside a div and colored green.</span>
+</div>
+
+<ul>
+  <li>List item 1 (child selector example)</li>
+  <li>List item 2</li>
+</ul>
+
+<h2>Heading 2</h2>
+<p>This paragraph is immediately after an h2 and italic (adjacent sibling).</p>
+
+<h3>Heading 3</h3>
+<p>This paragraph is a sibling after h3 and underlined (general sibling).</p>
+
+<a href="#">Hover over me (pseudo-class example)</a>
+
+<p>This paragraph shows first letter bigger and orange (pseudo-element).</p>
+
+<form>
+  <input type="text" placeholder="Text input with attribute selector">
+  <input type="password" placeholder="Password input (not selected)">
+</form>
+
+</body>
+</html>
